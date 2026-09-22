@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
         swipeRefresh.setOnRefreshListener(() -> webView.reload());
         swipeRefresh.setColorSchemeColors(0xFF2952A3);
+        swipeRefresh.setColorSchemeColors(0xFF2952A3);
+swipeRefresh.setOnChildScrollUpCallback((parent, child) -> webView.getScrollY() > 0);
 
         if (savedInstanceState == null) {
             webView.loadUrl(getString(R.string.website_url));
